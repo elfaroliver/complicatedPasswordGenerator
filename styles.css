@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color:hsl(298, 92%, 67%);
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  margin-bottom: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  font-size: 25px;
+  background-color: #00ff66;
+  border-radius: 50px;
+  border: 1px transparent solid;
+  color: black;
+  padding: 13px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+}
