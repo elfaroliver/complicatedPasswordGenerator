@@ -58,7 +58,6 @@ const marvelArray = [
   ...xmenArray,
   ...guardiansArray,
   ...avengersArray,
-  ...fantasticFourArray,
   ...villainsArray
 ];
 
@@ -66,6 +65,5 @@ export { spidermanArray };
 export { xmenArray };
 export { guardiansArray };
 export { avengersArray };
-export { fantasticFourArray };
 export { villainsArray };
 export { marvelArray };

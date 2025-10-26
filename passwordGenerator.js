@@ -4,10 +4,14 @@
  * to create unique passwords.
  */
 
-import { firstNameArray } from "./arrays/firstNameArray.js";
-import { lastNameArray } from "./arrays/lastNameArray.js";  
-import * as LOTR from './arrays/lotrCharacters.js';
-import * as Marvel from './arrays/marvelHeroes.js';
+console.log(firstNameArray);
+console.log(lastNameArray);
+console.log(LOTR.lotrCharactersArray);
+
+import { firstNameArray } from './arrays/firstNameArray.js';
+import { lastNameArray } from './arrays/lastNameArray.js';
+import * as LOTR from './arrays/lotrArrays.js';
+import * as Marvel from './arrays/marvelHeroesArrays.js';
 import * as TF from './arrays/transformersArray.js';
 import * as SW from './arrays/starWarsCharacters.js';
 
@@ -20,30 +24,35 @@ import * as SW from './arrays/starWarsCharacters.js';
 
 const randomNumber = Math.floor(Math.random() * 100);
 
-let number = prompt("Enter a range of numbers for an additional random number in your password (e.g., entering 50 will add a number between 0-49):");
+/*let number = prompt("Enter a range of numbers for an additional random number in your password (e.g., entering 50 will add a number between 0-49):");
 if (number !== null && !isNaN(number) && Number(number) > 0) {
   randomNumber = Math.floor(Math.random() * Number(number));
 }
 let numberRange = prompt("Enter two numbers separated by a comma to define a custom range for the additional random number in your password (e.g., entering 20,80 will add a number between 20-79):");
 if (numberRange !== null) {
   const parts = numberRange.split(",");
-}
+}*/
 
 const giftButton = document.getElementById("giftButton");
+
 function generatePassword() {
   const randomFirstName = firstNameArray[Math.floor(Math.random() * firstNameArray.length)];
   const randomLastName = lastNameArray[Math.floor(Math.random() * lastNameArray.length)];
+  const randomLOTR = LOTR.lotrCharactersArray[Math.floor(Math.random() * LOTR.lotrCharactersArray.length)];
+  const randomMarvel = Marvel.marvelArray[Math.floor(Math.random() * Marvel.marvelArray.length)];
+  const randomTF = TF.transformers[Math.floor(Math.random() * TF.transformers.length)];
+  const randomSW = SW.allStarWarsCharacters[Math.floor(Math.random() * SW.allStarWarsCharacters.length)];
   console.log('Your new password!', `${randomFirstName}${randomLastName}${randomNumber}`);
-  return `${randomFirstName}${randomLastName}${randomNumber}`;
+  return `${randomFirstName}${randomLastName}${randomNumber}${randomLOTR}${randomMarvel}${randomTF}${randomSW}`;
 }
 
 giftButton.addEventListener("click", () => {
   alert(`Your new password! ${randomFirstName}${randomLastName}${randomNumber}!`);
+  alert(`Your new password! ${generatePassword()}!`);
 });
 
 const randomFirstName = firstNameArray[Math.floor(Math.random() * firstNameArray.length)];
 console.log("Selected random first name:", randomFirstName);
 const randomLastName = lastNameArray[Math.floor(Math.random() * lastNameArray.length)];
 console.log("Selected random last name:", randomLastName);
-
 console.log('Your new password!', `${randomFirstName}${randomLastName}${randomNumber}`);
