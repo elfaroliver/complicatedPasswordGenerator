@@ -22,6 +22,7 @@ import * as SW from './arrays/starWarsCharacters.js';
  * 3. Custom Range Input: Let users specify a custom range by entering two numbers (e.g., 20-80) and generate a random number within that range.
  */
 
+//1. Fixed Range Number
 const randomNumber = Math.floor(Math.random() * 100);
 
 /*let number = prompt("Enter a range of numbers for an additional random number in your password (e.g., entering 50 will add a number between 0-49):");
@@ -47,12 +48,7 @@ function generatePassword() {
 }
 
 giftButton.addEventListener("click", () => {
-  alert(`Your new password! ${randomFirstName}${randomLastName}${randomNumber}!`);
-  alert(`Your new password! ${generatePassword()}!`);
+  const password = generatePassword();
+  alert(`Your new password! ${password}!`);
 });
 
-const randomFirstName = firstNameArray[Math.floor(Math.random() * firstNameArray.length)];
-console.log("Selected random first name:", randomFirstName);
-const randomLastName = lastNameArray[Math.floor(Math.random() * lastNameArray.length)];
-console.log("Selected random last name:", randomLastName);
-console.log('Your new password!', `${randomFirstName}${randomLastName}${randomNumber}`);
