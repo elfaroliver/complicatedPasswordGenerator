@@ -24,11 +24,12 @@ import * as SW from './arrays/starWarsCharacters.js';
 
 //1. Fixed Range Number
 const randomNumber = Math.floor(Math.random() * 100);
-
+//2. User-Defined Range
 /*let number = prompt("Enter a range of numbers for an additional random number in your password (e.g., entering 50 will add a number between 0-49):");
 if (number !== null && !isNaN(number) && Number(number) > 0) {
   randomNumber = Math.floor(Math.random() * Number(number));
 }
+//3. Custom Range Input
 let numberRange = prompt("Enter two numbers separated by a comma to define a custom range for the additional random number in your password (e.g., entering 20,80 will add a number between 20-79):");
 if (numberRange !== null) {
   const parts = numberRange.split(",");
