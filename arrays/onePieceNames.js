@@ -26,7 +26,7 @@ const supernovaName = [
   "Killer"
 ];
 
-const shichibukaiName [
+const shichibukaiName = [
   "Boa",
   "Moria",
   "Doffy",
